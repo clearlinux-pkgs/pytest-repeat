@@ -4,7 +4,7 @@
 #
 Name     : pytest-repeat
 Version  : 0.7.0
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/a2/87/992d24e12645abdb1dc20cad27d062285ba70b2d315defef518ee4912486/pytest-repeat-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a2/87/992d24e12645abdb1dc20cad27d062285ba70b2d315defef518ee4912486/pytest-repeat-0.7.0.tar.gz
 Summary  : pytest plugin for repeating tests
