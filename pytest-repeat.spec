@@ -4,12 +4,12 @@
 #
 Name     : pytest-repeat
 Version  : 0.8.0
-Release  : 19
+Release  : 20
 URL      : https://files.pythonhosted.org/packages/1a/ef/a721646e592e834ad93e1c880956b3d6ff060c623c2e317170f5747d9c71/pytest-repeat-0.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1a/ef/a721646e592e834ad93e1c880956b3d6ff060c623c2e317170f5747d9c71/pytest-repeat-0.8.0.tar.gz
 Summary  : pytest plugin for repeating tests
 Group    : Development/Tools
-License  : License-2.0(MPL-2.0) MPL-2.0 Mozilla
+License  : MPL-2.0
 Requires: pytest-repeat-license = %{version}-%{release}
 Requires: pytest-repeat-python = %{version}-%{release}
 Requires: pytest-repeat-python3 = %{version}-%{release}
@@ -62,11 +62,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551718111
+export SOURCE_DATE_EPOCH=1551722245
+export LDFLAGS="${LDFLAGS} -fno-lto"
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pytest-repeat
 cp LICENSE %{buildroot}/usr/share/package-licenses/pytest-repeat/LICENSE
